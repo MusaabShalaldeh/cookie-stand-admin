@@ -1,5 +1,5 @@
 import React from "react";
-import { hours } from "../../assets/data";
+import { hours } from "../assets/data";
 
 export default function ReportTable(props) {
   let rowTotals = []

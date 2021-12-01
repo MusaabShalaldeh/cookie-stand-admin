@@ -12,7 +12,7 @@ export default function CookieStandAdmin() {
   }
   return (<>
       <Header/>
-      <main className="flex flex-col items-center w-full flex-1 px-20 text-center bg-green-50">
+      <main className="flex flex-col items-center flex-1 w-full px-20 text-center bg-green-50">
         <CreateForm addReport={addReport}/>
         <ReportTable reports={reports}/>
       </main>
