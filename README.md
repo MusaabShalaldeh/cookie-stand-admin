@@ -18,6 +18,7 @@ Version 0.1.0, intial functionality
 
 
 **Open Pull Requests**:
-[Pull Request One](https://github.com/MusaabShalaldeh/cookie-stand-admin/pull/1)
 
 [Pull Request Two](https://github.com/MusaabShalaldeh/cookie-stand-admin/pull/2)
+
+[Pull Request Three](https://github.com/MusaabShalaldeh/cookie-stand-admin/pull/3)
