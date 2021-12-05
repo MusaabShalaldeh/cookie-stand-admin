@@ -12,6 +12,9 @@ export default function ReportTable(props) {
     }
     return total
   }
+
+
+
   const resetRowTotals = ()=>{
     rowTotals = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
   }
@@ -30,11 +33,12 @@ export default function ReportTable(props) {
             <th className="border-2 border-green-500">Totals</th>
           </thead>
           <tbody className="block md:table-row-group">{props.reports.map((report) => {
+              console.log(report.hourly_sales)
               report.hourly_sales.map((sale,i)=>{
                 rowTotals[i] += sale;
               })
               return(
-                <CookieStandTable location={report.location} hourly_sales={report.hourly_sales} hourly_sales_total={calculateTotal(report.hourly_sales)} />)
+                <CookieStandTable updateReports={props.updateReports} id={report.id} location={report.location} hourly_sales={report.hourly_sales} hourly_sales_total={calculateTotal(report.hourly_sales)} />)
               })}
             </tbody>
             <thead>
