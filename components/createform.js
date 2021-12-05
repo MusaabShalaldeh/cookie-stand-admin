@@ -45,50 +45,37 @@ export default function CreateForm(props) {
   }
   return (
     <>
-      <section className="bg-green-300 w-4/6 m-14 py-2">
+      <section className="bg-green-200 rounded-lg border-2 border-green-500 w-4/6 m-5 py-2">
         <h1 className="text-4xl my-6 font-bolder-40">Create Cookie Stand</h1>
         <form
           onSubmit={eventHandler}
           className="flex flex-col justify-center flex-1"
         >
-          <div className="inline-flex w-full px-8">
-            <h3>Location&nbsp; </h3>
-            <input type="text" className="w-full" name="location" required/>
+          <div className="inline-flex justify-content w-full m-auto p-auto">
+            <div className="w-2/3 px-20">
+              <h3 className="font-semibold">Location&nbsp; </h3>
+              <input type="text" className="w-full h-8" name="location" placeholder="Cookie Stand Location" required/>
+            </div>
+            <button className="m-auto w-64 p-4 bg-green-600" type="submit">
+              Create
+            </button>
           </div>
           <section className="my-10 flex flex-wrap">
             <div className="m-auto w-3/12">
-              <h3>Minimum Customers Per Hour</h3>
-              <input type="text" className="w-4/5" name="minimum_customers_per_hour" required/>
+              <h3 className="font-semibold">Minimum Customers Per Hour</h3>
+              <input type="text" className="w-4/5 h-8" name="minimum_customers_per_hour" value="0" required/>
             </div>
             <div className="m-auto w-3/12">
-              <h3>Maximum Customers Per Hour</h3>
-              <input type="text" className="w-4/5" name="maximum_customers_per_hour" required/>
+              <h3 className="font-semibold">Maximum Customers Per Hour</h3>
+              <input type="text" className="w-4/5 h-8" name="maximum_customers_per_hour" value="0" required/>
             </div>
             <div className="m-auto w-3/12">
-              <h3>Average Cookies Per Sale</h3>
-              <input type="text" className="w-4/5" name="average_cookies_per_sale" required/>
+              <h3 className="font-semibold">Average Cookies Per Sale</h3>
+              <input type="text" className="w-4/5 h-8" name="average_cookies_per_sale" value="0" required/>
             </div>
-            <button className="m-auto p-4 w-2/12 bg-green-600" type="submit">
-              Create
-            </button>
           </section>
         </form>
       </section>
-
-      {/* <section>
-        <h2 className="text-gray-500">
-          Report Table Coming Soon.....
-        </h2>
-        <div>
-          {cookieStands.map(val=>{
-            return(
-              <div className="text-gray-500">
-                {JSON.stringify(val)}
-              </div>
-            )
-          })}
-        </div>
-      </section> */}
     </>
   );
 }

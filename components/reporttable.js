@@ -21,7 +21,7 @@ export default function ReportTable(props) {
   resetRowTotals()
   return (
     
-    <section className="w-4/6 py-2 m-14">
+    <section className="w-4/6 py-2 m-1">
       {props.reports.length == 0 && <h2>No Cookie Stands Available</h2>}
       {props.reports.length > 0 && (
         <table className="w-full mx-auto bg-green-400">
