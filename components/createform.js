@@ -53,7 +53,7 @@ export default function CreateForm(props) {
         >
           <div className="inline-flex justify-content w-full m-auto p-auto">
             <div className="w-2/3 px-20">
-              <h3 className="font-semibold">Location&nbsp; </h3>
+              <h3 className="font-bold">Location&nbsp; </h3>
               <input type="text" className="w-full h-8" name="location" placeholder="Cookie Stand Location" required/>
             </div>
             <button className="m-auto w-64 p-4 bg-green-600" type="submit">
@@ -62,15 +62,15 @@ export default function CreateForm(props) {
           </div>
           <section className="my-10 flex flex-wrap">
             <div className="m-auto w-3/12">
-              <h3 className="font-semibold">Minimum Customers Per Hour</h3>
+              <h3 className="font-bold">Minimum Customers Per Hour</h3>
               <input type="text" className="w-4/5 h-8" name="minimum_customers_per_hour" value="0" required/>
             </div>
             <div className="m-auto w-3/12">
-              <h3 className="font-semibold">Maximum Customers Per Hour</h3>
+              <h3 className="font-bold">Maximum Customers Per Hour</h3>
               <input type="text" className="w-4/5 h-8" name="maximum_customers_per_hour" value="0" required/>
             </div>
             <div className="m-auto w-3/12">
-              <h3 className="font-semibold">Average Cookies Per Sale</h3>
+              <h3 className="font-bold">Average Cookies Per Sale</h3>
               <input type="text" className="w-4/5 h-8" name="average_cookies_per_sale" value="0" required/>
             </div>
           </section>

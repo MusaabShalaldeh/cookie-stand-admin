@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import axios from 'axios'
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 const tokenUrl = baseUrl + '/api/token/';
-console.log(tokenUrl)
+// console.log(tokenUrl)
 
 const AuthContext = createContext();
 
