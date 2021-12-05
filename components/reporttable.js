@@ -1,5 +1,6 @@
 import React from "react";
 import { hours } from "../assets/data";
+import CookieStandTable from "./CookieStandTable";
 
 export default function ReportTable(props) {
   let rowTotals = []
@@ -20,33 +21,28 @@ export default function ReportTable(props) {
     <section className="w-4/6 py-2 m-14">
       {props.reports.length == 0 && <h2>No Cookie Stands Available</h2>}
       {props.reports.length > 0 && (
-        <table className="w-full mx-auto bg-green-500">
+        <table className="w-full mx-auto bg-green-400">
           <thead>
-            <th>Location</th>
+            <th className="border-2 border-green-500">Location</th>
             {hours.map((hour) => {
-              return <th>{hour}</th>;
+              return <th className="border-2 border-green-500">{hour}</th>;
             })}
-            <th>Totals</th>
+            <th className="border-2 border-green-500">Totals</th>
           </thead>
-          <tbody>{props.reports.map((report) => {
+          <tbody className="block md:table-row-group">{props.reports.map((report) => {
+              report.hourly_sales.map((sale,i)=>{
+                rowTotals[i] += sale;
+              })
               return(
-                <tr>
-                  {console.log(report)}
-                  <td className="border-2 border-gray-800" border-black>{report.location}</td>
-                  {report.hourly_sales.map((sale,i)=>{
-                    rowTotals[i] += sale
-                    console.log(`ADDING ${rowTotals[i]} to ${sale} with result OF ${rowTotals[i]+sale}`)
-                    return <td className="border-2 border-gray-800">{sale}</td>
-                  })}
-                  <td className="border-2 border-gray-800">{calculateTotal(report.hourly_sales)}</td>
-              </tr>)})}
+                <CookieStandTable location={report.location} hourly_sales={report.hourly_sales} hourly_sales_total={calculateTotal(report.hourly_sales)} />)
+              })}
             </tbody>
             <thead>
-                <th  className="border-2 border-gray-800">Totals</th>
+                <th  className="border-2 border-green-500">Totals</th>
                 {rowTotals.map((rowTotal) => {
-                return <th className="border-2 border-gray-800">{rowTotal}</th>;
+                return <th className="border-2 border-green-500">{rowTotal}</th>;
                 })}
-                <th className="border-2 border-gray-800">{calculateTotal(rowTotals)}</th>
+                <th className="border-2 border-green-500">{calculateTotal(rowTotals)}</th>
             </thead>
         </table>
       )}

@@ -24,20 +24,20 @@ export default function CreateForm(props) {
         >
           <div className="inline-flex w-full px-8">
             <h3>Location&nbsp; </h3>
-            <input type="text" className="w-full" name="location" />
+            <input type="text" className="w-full" name="location" required/>
           </div>
           <section className="my-10 flex flex-wrap">
             <div className="m-auto w-3/12">
               <h3>Minimum Customers Per Hour</h3>
-              <input type="text" className="w-4/5" name="minCustomers" />
+              <input type="text" className="w-4/5" name="minCustomers" required/>
             </div>
             <div className="m-auto w-3/12">
               <h3>Maximum Customers Per Hour</h3>
-              <input type="text" className="w-4/5" name="maxCustomers" />
+              <input type="text" className="w-4/5" name="maxCustomers" required/>
             </div>
             <div className="m-auto w-3/12">
               <h3>Average Cookies Per Sale</h3>
-              <input type="text" className="w-4/5" name="avgCookies" />
+              <input type="text" className="w-4/5" name="avgCookies" required/>
             </div>
             <button className="m-auto p-4 w-2/12 bg-green-600" type="submit">
               Create

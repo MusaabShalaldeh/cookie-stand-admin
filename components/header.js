@@ -4,7 +4,7 @@ import {useAuth} from '../contexts/auth'
 export default function Header() {
   const { user } = useAuth();
   return (
-    <header className="flex w-full bg-green-500 py-8">
+    <header className="flex w-full bg-green-500 py-8 px-40">
       <h1 className="text-4xl mx-8 w-11/12 font-bolder-40">Cookie Stand Admin</h1>
       <ul className="inline-flex">
         <li className="mx-2 p-2">
